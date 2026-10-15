@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="cs" data-style="vyzkum">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ÚZEI · Intranet</title>
+  <link rel="icon" href="assets/mark.png"><link rel="stylesheet" href="assets/fonts.css"><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="theme.css"><link rel="stylesheet" href="style-options.css">
+</head>
+<body>
+  <a class="skip" href="#main">Přejít k obsahu</a>
+  <aside class="sidebar">
+    <div class="brand-row"><a class="brand" href="#home" title="Ústav zemědělské ekonomiky a informací"><img src="assets/mark.png" alt=""><span>ÚZEI <small>INTRANET</small></span></a><button id="search-toggle" class="icon-button" aria-label="Hledat na intranetu" data-tooltip="Hledat na intranetu" aria-haspopup="dialog"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg></button></div>
+    <nav id="nav" aria-label="Hlavní navigace"></nav>
+  </aside>
+  <div class="workspace">
+    <main id="main" tabindex="-1"></main>
+  </div>
+  <dialog id="detail"><div id="dialog-content" tabindex="-1" autofocus></div></dialog>
+  <dialog id="search-dialog" aria-label="Hledat na intranetu">
+    <form id="search-form" role="search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><input id="search" type="search" aria-label="Hledat dokumenty, projekty a aktuality" placeholder="Hledat dokumenty, projekty a aktuality" autocomplete="off"><button id="search-close" type="button" class="icon-button" aria-label="Zavřít hledání">×</button></form>
+    <div id="search-results" aria-label="Výsledky hledání"></div><span id="search-status" class="sr-only" role="status"></span>
+  </dialog>
+  <script src="supplemental-data.js"></script>
+  <script src="date-picker.js"></script>
+  <script src="calendar.js"></script>
+  <script src="reports.js"></script>
+  <script src="directory-data.js"></script>
+  <script src="directory.js"></script>
+  <script src="organization.js"></script>
+  <script src="files.js"></script>
+  <script src="app.js"></script>
+  <script src="search.js"></script>
+  <script src="tooltips.js"></script>
+</body>
+</html>
