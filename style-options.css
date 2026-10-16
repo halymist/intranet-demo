@@ -2,6 +2,7 @@
    original prototype look. */
 
 /* ── Readable sizes, AI as an ordinary link, colours from tokens ── */
+html[data-style=vyzkum]{scrollbar-gutter:stable}
 html[data-style=vyzkum] body{font-size:15px}
 html[data-style=vyzkum] .quick.ai{background:var(--surface);color:var(--ink);border-color:var(--border)}
 html[data-style=vyzkum] .quick.ai:after{display:none}
@@ -51,19 +52,19 @@ html[data-style=vyzkum] .organization-view .workspace{flex:1;height:auto;min-hei
 }
 
 /* ── Home banner ── */
-html[data-style=vyzkum] #main:has(>.quicklinks)::before{content:"Ústav zemědělské ekonomiky a informací";display:flex;align-items:flex-end;min-height:140px;margin-bottom:28px;padding:28px 36px;color:#fff;font:500 34px/1.15 var(--display);letter-spacing:-.4px;background:repeating-linear-gradient(112deg,rgba(255,255,255,.06) 0 2px,transparent 2px 16px),linear-gradient(100deg,#1c3d15 0%,#2e5e1f 60%,#4f8a22 100%);border-bottom:5px solid #82b029}
+html[data-style=vyzkum] #main:has(>.quicklinks)::before{content:"Ústav zemědělské ekonomiky a informací";display:flex;align-items:center;min-height:140px;margin-bottom:28px;padding:22px 36px;color:#fff;font:500 32px/1.2 var(--display);letter-spacing:-.4px;background:repeating-linear-gradient(112deg,rgba(255,255,255,.06) 0 2px,transparent 2px 16px),linear-gradient(100deg,#1c3d15 0%,#2e5e1f 60%,#4f8a22 100%);border-bottom:5px solid #82b029}
 @media(max-width:800px){html[data-style=vyzkum] #main:has(>.quicklinks)::before{min-height:110px;padding:18px 20px;font-size:23px}}
 
 /* ── Home fits one screen on desktop ──
-   fitHomeNews measures with the body in .measuring (banner at its 64px minimum, news gets the rest) and keeps the entries that fit;
+   fitHomeNews measures with the body in .measuring (banner at its own text height, news gets the rest) and keeps the entries that fit;
    afterwards the news rows keep their natural height and the banner absorbs the leftover space. */
 @media(min-width:1001px) and (min-height:890px){
   html[data-style=vyzkum] body.home-view{height:100dvh;display:flex;flex-direction:column;overflow:hidden}
   html[data-style=vyzkum] .home-view .sidebar{flex:none}
   html[data-style=vyzkum] .home-view .workspace{flex:1;min-height:0;display:flex;flex-direction:column}
   html[data-style=vyzkum] .home-view main{flex:1;min-height:0;width:100%;margin-block:0;display:flex;flex-direction:column;padding-bottom:28px}
-  html[data-style=vyzkum] .home-view #main::before{flex:1 1 140px;min-height:64px;max-height:300px;box-sizing:border-box}
-  html[data-style=vyzkum] .home-view.measuring #main::before{flex:0 0 64px}
+  html[data-style=vyzkum] .home-view #main::before{flex:1 1 140px;min-height:auto;max-height:300px;box-sizing:border-box}
+  html[data-style=vyzkum] .home-view.measuring #main::before{flex:0 0 auto}
   html[data-style=vyzkum] .home-view .quicklinks,html[data-style=vyzkum] .home-view .home-columns{flex:none}
   html[data-style=vyzkum] .home-view.measuring .home-columns{flex:1 0 auto;min-height:0}
   html[data-style=vyzkum] .home-view .home-columns>section{display:flex;flex-direction:column;min-height:0}
